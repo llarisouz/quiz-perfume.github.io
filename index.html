@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Perfume Perfeito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background: #5c67f2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #4a54e1;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #whatsapp-link {
+            margin-top: 10px;
+            display: block;
+            font-size: 16px;
+            color: #25D366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Descubra o Perfume Perfeito!</h1>
+        
+        <div class="question">1. O que você deseja perfumar?</div>
+        <div class="options">
+            <label><input type="radio" name="q1" value="casa"> Casa inteira</label>
+            <label><input type="radio" name="q1" value="quarto"> Quarto</label>
+            <label><input type="radio" name="q1" value="banheiro"> Banheiro</label>
+            <label><input type="radio" name="q1" value="roupas"> Roupas e roupa de cama</label>
+        </div>
+        
+        <div class="question">2. Qual sensação você quer trazer?</div>
+        <div class="options">
+            <label><input type="radio" name="q2" value="elegancia"> Sofisticação e elegância</label>
+            <label><input type="radio" name="q2" value="calma"> Aconchego e calma</label>
+            <label><input type="radio" name="q2" value="leveza"> Frescor e leveza</label>
+            <label><input type="radio" name="q2" value="energia"> Energia e vitalidade</label>
+        </div>
+        
+        <div class="question">3. Você prefere fragrâncias:</div>
+        <div class="options">
+            <label><input type="radio" name="q3" value="floral"> Florais</label>
+            <label><input type="radio" name="q3" value="amadeirado"> Amadeiradas</label>
+            <label><input type="radio" name="q3" value="citrico"> Cítricas</label>
+            <label><input type="radio" name="q3" value="adocicado"> Adocicadas</label>
+        </div>
+        
+        <button onclick="getResult()">Ver Resultado</button>
+        
+        <div id="result"></div>
+        <a id="whatsapp-link" href="http://wa.me/5573991500523" target="_blank" style="display: none;">Fale conosco no WhatsApp e adquira o seu!</a>
+    </div>
+    
+    <script>
+        function getResult() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            
+            if (!q1 || !q2 || !q3) {
+                document.getElementById('result').innerText = "Por favor, responda todas as perguntas!";
+                return;
+            }
+            
+            let fragrance = "";
+            if (q2.value === "elegancia") {
+                if (q3.value === "floral") fragrance = "Olíbano e Patchouli";
+                else if (q3.value === "amadeirado") fragrance = "Gálbano e Baunilha Bourbon";
+                else if (q3.value === "citrico") fragrance = "Chá Branco";
+                else fragrance = "Cereja e Patchouli";
+            } else if (q2.value === "calma") {
+                if (q3.value === "floral") fragrance = "Magnolia e Vetiver";
+                else if (q3.value === "amadeirado") fragrance = "Lavanda e Sândalo";
+                else if (q3.value === "citrico") fragrance = "Bamboo e Bergamota";
+                else fragrance = "Peônia e Mel";
+            } else if (q2.value === "leveza") {
+                if (q3.value === "floral") fragrance = "Chá Verde";
+                else if (q3.value === "amadeirado") fragrance = "Alecrim e Madeiras de Pinho";
+                else if (q3.value === "citrico") fragrance = "Chá Branco";
+                else fragrance = "Manga Verde e Laranja";
+            } else {
+                if (q3.value === "floral") fragrance = "Olíbano e Patchouli";
+                else if (q3.value === "amadeirado") fragrance = "Alecrim e Madeiras de Pinho";
+                else if (q3.value === "citrico") fragrance = "Chá Branco";
+                else fragrance = "Manga Verde e Laranja";
+            }
+            
+            document.getElementById('result').innerText = "Seu perfume ideal é: " + fragrance + "!";
+            document.getElementById('whatsapp-link').style.display = "block";
+        }
+    </script>
+</body>
+</html>
