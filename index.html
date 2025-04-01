@@ -3,141 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz: Perfume Perfeito</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Quiz de Perfumes</title>
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #efe2d9;
-            text-align: left;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
-        .container {
-            max-width: 600px;
-            background: white;
-            padding: 20px;
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 100px; /* Ajuste o tamanho da logo */
+            margin-bottom: 5px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: auto;
         }
-        .question {
-            font-size: 18px;
+
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-family: 'Comfortaa', cursive;
+            text-align: center; /* Alinhamento à esquerda */
+            color: #a95829;
+            margin-bottom: 20px;
+        }
+
+        .quiz-container label {
+            display: block;
             margin-bottom: 10px;
             color: #767151;
-            font-family: 'Comfortaa', sans-serif;
         }
-        .options label {
-            display: block;
-            margin: 5px 0;
-            color: #767151;
-            font-family: 'Along sans s2', sans-serif;
+
+        .quiz-container input[type="radio"] {
+            margin-right: 5px;
+            accent-color:#a95829;
         }
-        input[type="radio"] {
-  accent-color: #e95829;
-}
-        button {
-            margin-top: 20px;
-            padding: 10px;
+
+        .quiz-container button {
+            background-color: #a95829;
+            color: #fff;
             border: none;
-            background: #a95829;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
+            padding: 10px 20px;
             border-radius: 5px;
-            font-family: 'Montserrat', sans-serif;
-        }
-        button:hover {
-            background: #767151;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #a95829;
-            font-family: 'Comfortaa', sans-serif;
-        }
-        #whatsapp-link {
-            margin-top: 10px;
+            cursor: pointer;
             display: block;
-            font-size: 16px;
-            color: #25D366;
-            text-decoration: none;
+            margin: 20px auto;
+        }
+
+        .quiz-container button:hover {
+            background-color: #767151;
+        }
+
+        .quiz-container #results {
+            margin-top: 20px;
+            text-align: center; /* Alinhamento à esquerda */
             font-weight: bold;
+            color: #e95829;
+            font-family: 'Comfortaa', sans-serif
+        }
+
+        .quiz-container #whatsapp-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .quiz-container #whatsapp-link a {
+            background-color: #25d366;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .quiz-container #whatsapp-link a:hover {
+            background-color: #128c7e;
+        }
+
+        .question {
             font-family: 'Along sans s2', sans-serif;
+            color: #767151;
+            margin-bottom: 15px;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 style="color: #a95829; font-family: 'Comfortaa', sans-serif;">Descubra o Perfume Perfeito!</h1>
-        
-        <div class="question">1. O que você deseja perfumar?</div>
-        <div class="options">
-            <label><input type="radio" name="q1" value="casa"> Casa inteira</label>
-            <label><input type="radio" name="q1" value="quarto"> Quarto</label>
-            <label><input type="radio" name="q1" value="banheiro"> Banheiro</label>
-            <label><input type="radio" name="q1" value="roupas"> Roupas e roupa de cama</label>
-        </div>
-        
-        <div class="question">2. Qual sensação você quer trazer?</div>
-        <div class="options">
-            <label><input type="radio" name="q2" value="elegancia"> Sofisticação e elegância</label>
-            <label><input type="radio" name="q2" value="calma"> Aconchego e calma</label>
-            <label><input type="radio" name="q2" value="leveza"> Frescor e leveza</label>
-            <label><input type="radio" name="q2" value="energia"> Energia e vitalidade</label>
-        </div>
-        
-        <div class="question">3. Você prefere fragrâncias:</div>
-        <div class="options">
-            <label><input type="radio" name="q3" value="floral"> Florais</label>
-            <label><input type="radio" name="q3" value="amadeirado"> Amadeiradas</label>
-            <label><input type="radio" name="q3" value="citrico"> Cítricas</label>
-            <label><input type="radio" name="q3" value="adocicado"> Adocicadas</label>
-        </div>
-        
-        <button onclick="getResult()">Ver Resultado</button>
-        
-        <div id="result"></div>
-        <a id="whatsapp-link" href="https://wa.me/5573991500523" target="_blank" style="display: none;">Fale conosco no WhatsApp</a>
-    </div>
     
+    <div class="quiz-container">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo Cielito">
+        </div>
+        <h1>Descubra o Perfume Perfeito!</h1>
+        <div id="quiz"></div>
+        <button id="submit">Ver Resultado</button>
+        <div id="results"></div>
+        <div id="whatsapp-link"></div>
+    </div>
+
     <script>
-        function getResult() {
-            const q1 = document.querySelector('input[name="q1"]:checked');
-            const q2 = document.querySelector('input[name="q2"]:checked');
-            const q3 = document.querySelector('input[name="q3"]:checked');
-            
-            if (!q1 || !q2 || !q3) {
-                document.getElementById('result').innerText = "Por favor, responda todas as perguntas!";
-                return;
+        const quizContainer = document.getElementById('quiz');
+        const resultsContainer = document.getElementById('results');
+        const submitButton = document.getElementById('submit');
+        const whatsappLinkContainer = document.getElementById('whatsapp-link');
+
+        const myQuestions = [
+            {
+                question: "1. O que você deseja perfumar?",
+                answers: {
+                    a: "Casa inteira",
+                    b: "Quarto",
+                    c: "Banheiro",
+                    d: "Roupas e roupa de cama"
+                },
+                correctAnswer: null
+            },
+            {
+                question: "2. Qual sensação você quer trazer?",
+                answers: {
+                    a: "Sofisticação e elegância",
+                    b: "Aconchego e calma",
+                    c: "Frescor e leveza",
+                    d: "Energia e vitalidade"
+                },
+                correctAnswer: null
+            },
+            {
+                question: "3. Você prefere fragrâncias:",
+                answers: {
+                    a: "Florais",
+                    b: "Amadeiradas",
+                    c: "Cítricas",
+                    d: "Adocicadas"
+                },
+                correctAnswer: null
             }
-            
-            let fragrance = "";
-            if (q2.value === "elegancia") {
-                if (q3.value === "floral") fragrance = "Olíbano e Patchouli";
-                else if (q3.value === "amadeirado") fragrance = "Gálbano e Baunilha Bourbon";
-                else if (q3.value === "citrico") fragrance = "Chá Branco";
-                else fragrance = "Cereja e Patchouli";
-            } else if (q2.value === "calma") {
-                if (q3.value === "floral") fragrance = "Magnolia e Vetiver";
-                else if (q3.value === "amadeirado") fragrance = "Lavanda e Sândalo";
-                else if (q3.value === "citrico") fragrance = "Bamboo e Bergamota";
-                else fragrance = "Peônia e Mel";
-            } else if (q2.value === "leveza") {
-                if (q3.value === "floral") fragrance = "Chá Verde";
-                else if (q3.value === "amadeirado") fragrance = "Alecrim e Madeiras de Pinho";
-                else if (q3.value === "citrico") fragrance = "Chá Branco";
-                else fragrance = "Manga Verde e Laranja";
-            } else {
-                if (q3.value === "floral") fragrance = "Olíbano e Patchouli";
-                else if (q3.value === "amadeirado") fragrance = "Alecrim e Madeiras de Pinho";
-                else if (q3.value === "citrico") fragrance = "Chá Branco";
-                else fragrance = "Manga Verde e Laranja";
-            }
-            
-            document.getElementById('result').innerText = "Seu perfume ideal é: " + fragrance + "!";
-            document.getElementById('whatsapp-link').style.display = "block";
+        ];
+
+        function buildQuiz() {
+            const output = [];
+
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+                const answers = [];
+
+                for (letter in currentQuestion.answers) {
+                    answers.push(
+                        `<label>
+                            <input type="radio" name="question${questionNumber}" value="${letter}">
+                            ${currentQuestion.answers[letter]}
+                        </label>`
+                    );
+                }
+
+                output.push(
+                    `<div class="question"> ${currentQuestion.question} </div>
+                    <div class="answers"> ${answers.join('')} </div>`
+                );
+            });
+
+            quizContainer.innerHTML = output.join('');
         }
+
+        function showResults() {
+            const answerContainers = quizContainer.querySelectorAll('.answers');
+            let userAnswers = [];
+
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+                const answerContainer = answerContainers[questionNumber];
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                userAnswers.push(userAnswer);
+            });
+
+            let results = { a: 0, b: 0, c: 0, d: 0 };
+
+            userAnswers.forEach(answer => {
+                if (answer) {
+                    results[answer]++;
+                }
+            });
+
+            let finalAnswer = Object.keys(results).reduce((a, b) => results[a] > results[b] ? a : b);
+
+            let resultText = "";
+            let description = "";
+
+            // Adapte este trecho com as respostas do seu PDF
+            switch (userAnswers[1] + userAnswers[2]) {
+                case 'ad':
+                    resultText = "Manga Verde e Laranja - Linha Cotidiano";
+                    description = "Uma explosão de frescor e leveza, com a manga verde e a laranja criando um equilíbrio perfeito entre notas frescas e um toque adocicado, deixando o ambiente acolhedor e vibrante.";
+                    break;
+                case 'ac':
+                    resultText = "Chá Branco - Linha Cotidiano";
+                    description = "Refinado, leve e com notas cítricas que vão deixar o ambiente super fresco e acolhedor. É a escolha perfeita para criar aquele clima suave, elegante e cheio de frescor.";
+                    break;
+                case 'ab':
+                    resultText = "Lavanda e Sândalo - Linha Cotidiano";
+                    description = "A lavanda traz suavidade e relaxamento, enquanto o sândalo, com seu toque amadeirado, deixa tudo mais acolhedor e tranquilo. É o cheirinho perfeito para um ambiente que abraça e traz paz!";
+                    break;
+                case 'aa':
+                    resultText = "Magnolia e Vetiver - Linha Casa Cielito";
+                    description = "Uma combinação vibrante e delicada, com a magnólia trazendo frescor floral e o vetiver dando um toque leve e sofisticado. Perfeita para energizar e refrescar o ambiente.";
+                    break;
+                case 'bd':
+                    resultText = "Peônia e Mel - Linha Casa Cielito";
+                    description = "Uma combinação suave e envolvente, com a delicadeza floral da peônia e a doçura acolhedora do mel. É o cheirinho perfeito para criar um ambiente tranquilo, aconchegante e cheio de conforto.";
+                    break;
+                case 'bc':
+                    resultText = "Bamboo e Bergamota - Linha Cotidiano";
+                    description = "Fresco e revigorante, o bamboo traz leveza e suavidade, enquanto a bergamota adiciona um toque cítrico e energizante, criando um ambiente relaxante e cheio de frescor.";
+                    break;
+                case 'bb':
+                    resultText = "Lavanda e Sândalo - Linha Cotidiano";
+                    description = "A lavanda traz suavidade e relaxamento, enquanto o sândalo, com seu toque amadeirado, deixa tudo mais acolhedor e tranquilo. É o cheirinho perfeito para um ambiente que abraça e traz paz!";
+                    break;
+                case 'ba':
+                    resultText = "Olíbano e Patchouli - Linha Cotidiano";
+                    description = "Um floral quente e confortante, com a elegância do olíbano e a profundidade envolvente do patchouli. Perfeito para criar uma atmosfera tranquila e acolhedora.";
+                    break;
+                case 'cd':
+                    resultText = "Magnolia e Vetiver - Linha Casa Cielito";
+                    description = "Fresca e delicada, a magnólia traz suavidade floral, enquanto o vetiver adiciona um toque leve e sofisticado, criando uma fragrância suave e refrescante, ideal para um espaço tranquilo e acolhedor.";
+                    break;
+                case 'cc':
+                    resultText = "Chá Branco - Linha Cotidiano";
+                    description = "Refinado e suave, o Chá Branco traz frescor e leveza, criando um ambiente tranquilo e acolhedor, perfeito para momentos de relaxamento.";
+                    break;
+                case 'cb':
+                    resultText = "Alecrim e Madeiras de Pinho - Linha Cotidiano";
+                    description = "A combinação do alecrim, que traz frescor, com a suavidade das madeiras de pinho cria um ambiente leve, mas com aquele toque amadeirado que transmite acolhimento e tranquilidade.";
+                    break;
+                case 'ca':
+                    resultText = "Magnolia e Vetiver - Linha Casa Cielito";
+                    description = "Delicada e fresca, a magnólia traz suavidade floral, enquanto o vetiver adiciona leveza e sofisticação. Uma combinação perfeita para um espaço fresco e acolhedor.";
+                    break;
+                case 'dd':
+                    resultText = "Manga Verde e Laranja - Linha Cotidiano";
+                    description = "Com a combinação refrescante da manga verde e da laranja, essa fragrância traz uma explosão de energia e frescor, enquanto o toque adocicado adiciona uma sensação de conforto e acolhimento ao ambiente. É a escolha perfeita para criar uma atmosfera alegre e revigorante!";
+                    break;
+                case 'dc':
+                    resultText = "Chá Branco - Linha Cotidiano";
+                    description = "Essa fragrância tem o equilíbrio ideal de notas cítricas, que trazem uma sensação de frescor imediato e vitalidade para o ambiente. Com o toque suave e delicado do chá branco, ela cria uma atmosfera energizante, mas ao mesmo tempo tranquila e elegante.";
+                    break;
+                case 'db':
+                    resultText = "Alecrim e Madeiras de Pinho - Linha Cotidiano";
+                    description = "A combinação fresca e vibrante do alecrim com a suavidade das madeiras de pinho cria um ambiente cheio de vitalidade e energia, mas com aquele toque amadeirado que traz aconchego e equilíbrio.";
+                    break;
+                case 'da':
+                    resultText = "Olíbano e Patchouli - Linha Cotidiano";
+                    description = "Com um floral elegante e notas refrescantes, o olíbano e o patchouli criam uma fragrância envolvente e cheia de vitalidade, ideal para trazer energia e sofisticação ao ambiente.";
+                    break;
+                default:
+                    resultText = "Não foi possível determinar o seu perfume ideal.";
+                    description = "";
+            }
+
+            resultsContainer.innerHTML = `Seu perfume ideal é: ${resultText} <br><br> Descrição: ${description}`;
+            whatsappLinkContainer.innerHTML = `<a href="http://wa.me/5573991500523">Fale conosco no WhatsApp</a>`;
+        }
+
+        buildQuiz();
+
+        submitButton.addEventListener('click', showResults);
     </script>
 </body>
 </html>
