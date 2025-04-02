@@ -70,7 +70,7 @@
 
         .quiz-container #results {
             margin-top: 20px;
-            text-align: center; /* Alinhamento à esquerda */
+            text-align: left; /* Alinhamento à esquerda */
             font-weight: bold;
             color: #e95829;
             font-family: 'Comfortaa', sans-serif
@@ -207,76 +207,76 @@
             // Adapte este trecho com as respostas do seu PDF
             switch (userAnswers[1] + userAnswers[2]) {
                 case 'ad':
-                    resultText = "Manga Verde e Laranja - Linha Cotidiano";
-                    description = "Uma explosão de frescor e leveza, com a manga verde e a laranja criando um equilíbrio perfeito entre notas frescas e um toque adocicado, deixando o ambiente acolhedor e vibrante.";
+                    resultText = "Cereja e Patchouli – Linha Cotidiano ou Peônia e Mel – Linha Casa Cielito";
+                    description = "Escolha incrível! Você quer sofisticação e elegância, mas com aquele toque adocicado que traz charme e aconchego. Então essas fragrâncias são perfeitas para você:<br><br> 🍒 Cereja e Patchouli – Linha Cotidiano<br> Uma combinação envolvente de cereja suculenta com a profundidade elegante do patchouli. Doce na medida certa, perfeito para um ambiente sofisticado e acolhedor.<br><br> 🌸 Peônia e Mel – Linha Casa Cielito <br>Floral adocicado com um toque cremoso de mel. Uma fragrância sofisticada e marcante, que transforma qualquer espaço em um refúgio aconchegante.<br><br>";
                     break;
                 case 'ac':
                     resultText = "Chá Branco - Linha Cotidiano";
-                    description = "Refinado, leve e com notas cítricas que vão deixar o ambiente super fresco e acolhedor. É a escolha perfeita para criar aquele clima suave, elegante e cheio de frescor.";
+                    description = "Ótima escolha! Você busca sofisticação e elegância, mas com aquele toque cítrico e fresco que deixa tudo mais leve. E temos a fragrância perfeita para isso:<br><br> 🍃 Chá Branco – Linha Cotidiano<br> Refinado, delicado e com um frescor irresistível. Inspirado no clássico Chá Branco da Tânia Bulhões, ele combina notas cítricas e florais para um ambiente elegante sem esforço.<br><br>";
                     break;
                 case 'ab':
-                    resultText = "Lavanda e Sândalo - Linha Cotidiano";
-                    description = "A lavanda traz suavidade e relaxamento, enquanto o sândalo, com seu toque amadeirado, deixa tudo mais acolhedor e tranquilo. É o cheirinho perfeito para um ambiente que abraça e traz paz!";
+                    resultText = "Gálbano e Baunilha Bourbon – Linha Casa Cielito";
+                    description = "Você fez uma escolha incrível! Se o que você busca é sofisticação e elegância, mas com fragrâncias mais amadeiradas, essa é perfeita para você: <br><br>🌳 Gálbano e Baunilha Bourbon – Linha Casa Cielito<br> Uma combinação surpreendente de notas verdes e amadeiradas com a cremosidade da baunilha bourbon. Elegante, marcante e perfeita para um ambiente acolhedor, sem perder a sofisticação.<br><br>";
                     break;
                 case 'aa':
-                    resultText = "Magnolia e Vetiver - Linha Casa Cielito";
-                    description = "Uma combinação vibrante e delicada, com a magnólia trazendo frescor floral e o vetiver dando um toque leve e sofisticado. Perfeita para energizar e refrescar o ambiente.";
+                    resultText = "Olíbano e Patchouli – Linha Cotidiano ou Magnolia e Vetiver – Linha Casa Cielito";
+                    description = "Você tem um ótimo gosto! Se a ideia é trazer sofisticação e elegância com um toque floral para o ambiente, essas fragrâncias foram feitas para você:<br><br> 🌿 Olíbano e Patchouli – Linha Cotidiano <br>Um floral quente e confortante, com a elegância do olíbano e a profundidade envolvente do patchouli. Perfeito para criar uma atmosfera tranquila e acolhedora. <br><br>🌸 Magnolia e Vetiver – Linha Casa Cielito Um floral sofisticado com um toque fresco que traz leveza e presença ao mesmo tempo. Perfeito para quem quer um ambiente envolvente, mas sem pesar.<br><br>";
                     break;
                 case 'bd':
-                    resultText = "Peônia e Mel - Linha Casa Cielito";
-                    description = "Uma combinação suave e envolvente, com a delicadeza floral da peônia e a doçura acolhedora do mel. É o cheirinho perfeito para criar um ambiente tranquilo, aconchegante e cheio de conforto.";
+                    resultText = "Peônia e Mel – Linha Casa Cielito";
+                    description = "Que escolha incrível! Se você quer que seu ambiente seja mais aconchegante e traga uma sensação de tranquilidade com um toque adocicado, a fragrância Peônia e Mel é perfeita para você: <br><br>🌸 Peônia e Mel – Linha Casa Cielito <br> Uma combinação suave e envolvente, com a delicadeza floral da peônia e a doçura acolhedora do mel. É o cheirinho perfeito para criar um ambiente tranquilo, aconchegante e cheio de conforto.<br><br>";
                     break;
                 case 'bc':
-                    resultText = "Bamboo e Bergamota - Linha Cotidiano";
-                    description = "Fresco e revigorante, o bamboo traz leveza e suavidade, enquanto a bergamota adiciona um toque cítrico e energizante, criando um ambiente relaxante e cheio de frescor.";
+                    resultText = "Chá Branco – Linha Cotidiano ou Bamboo e Bergamota - Linha Cotidiano";
+                    description = "Que escolha maravilhosa! Se você quer que seu ambiente seja mais aconchegante e traga aquela sensação de calma com um toque cítrico, essas fragrâncias vão criar o clima perfeito para você:<br><br> 🍃 Chá Branco – Linha Cotidiano <br>Refinado e suave, o Chá Branco traz frescor e leveza, criando um ambiente tranquilo e acolhedor, perfeito para momentos de relaxamento.<br><br>🌿 Bamboo e Bergamota – Linha Cotidiano<br> Fresco e revigorante, o bamboo traz leveza e suavidade, enquanto a bergamota adiciona um toque cítrico e energizante, criando um ambiente relaxante e cheio de frescor.<br><br>";
                     break;
                 case 'bb':
                     resultText = "Lavanda e Sândalo - Linha Cotidiano";
-                    description = "A lavanda traz suavidade e relaxamento, enquanto o sândalo, com seu toque amadeirado, deixa tudo mais acolhedor e tranquilo. É o cheirinho perfeito para um ambiente que abraça e traz paz!";
+                    description = "Que escolha maravilhosa! Se você quer um ambiente de aconchego e calma com aquele toque amadeirado, você vai amar essa fragrância: <br><br>💜 Lavanda e Sândalo – Linha Cotidiano <br>A lavanda traz suavidade e relaxamento, enquanto o sândalo, com seu toque amadeirado, deixa tudo mais acolhedor e tranquilo. É o cheirinho perfeito para um ambiente que abraça e traz paz!<br><br>";
                     break;
                 case 'ba':
-                    resultText = "Olíbano e Patchouli - Linha Cotidiano";
-                    description = "Um floral quente e confortante, com a elegância do olíbano e a profundidade envolvente do patchouli. Perfeito para criar uma atmosfera tranquila e acolhedora.";
+                    resultText = "Olíbano e Patchouli - Linha Cotidiano ou Magnolia e Vetiver – Linha Casa Cielito";
+                    description = "Que escolha gostosa! Se você quer um ambiente com aconchego e calma, mas com um toque floral, essas fragrâncias vão te abraçar:<br><br>🌿 Olíbano e Patchouli – Linha Cotidiano<br> Um floral quente e confortante, com a elegância do olíbano e a profundidade envolvente do patchouli. Perfeito para criar uma atmosfera tranquila e acolhedora. <br><br>🌸 Magnolia e Vetiver – Linha Casa Cielito<br> Fresco, delicado e sofisticado. A magnólia traz leveza, enquanto o vetiver adiciona uma suavidade elegante, ideal para momentos de relaxamento.<br><br>";
                     break;
                 case 'cd':
-                    resultText = "Magnolia e Vetiver - Linha Casa Cielito";
-                    description = "Fresca e delicada, a magnólia traz suavidade floral, enquanto o vetiver adiciona um toque leve e sofisticado, criando uma fragrância suave e refrescante, ideal para um espaço tranquilo e acolhedor.";
+                    resultText = "Manga Verde e Laranja – Linha Cotidiano ou Magnolia e Vetiver - Linha Casa Cielito";
+                    description = "Que escolha incrível! Se você quer que seu ambiente seja mais fresco e leve, trazendo uma sensação de suavidade, mas também com aquele toque adocicado que deixa tudo ainda mais acolhedor, essas fragrâncias são perfeitas para você: <br><br>🍊 Manga Verde e Laranja – Linha Cotidiano<br> Uma explosão de frescor e leveza, com a manga verde e a laranja criando um equilíbrio perfeito entre notas frescas e um toque adocicado, deixando o ambiente acolhedor e vibrante. <br><br>🌸 Magnolia e Vetiver – Linha Casa Cielito <br>Fresca e delicada, a magnólia traz suavidade floral, enquanto o vetiver adiciona um toque leve e sofisticado, criando uma fragrância suave e refrescante, ideal para um espaço tranquilo e acolhedor.<br><br>";
                     break;
                 case 'cc':
                     resultText = "Chá Branco - Linha Cotidiano";
-                    description = "Refinado e suave, o Chá Branco traz frescor e leveza, criando um ambiente tranquilo e acolhedor, perfeito para momentos de relaxamento.";
+                    description = "Que escolha maravilhosa! Se você quer que seu ambiente seja mais fresco e leve, trazendo uma sensação de tranquilidade e frescor, a fragrância Chá Branco é exatamente o que você precisa:<br><br> 🍃 Chá Branco – Linha Cotidiano <br> Refinado, leve e com notas cítricas que vão deixar o ambiente super fresco e acolhedor. É a escolha perfeita para criar aquele clima suave, elegante e cheio de frescor.<br><br>";
                     break;
                 case 'cb':
                     resultText = "Alecrim e Madeiras de Pinho - Linha Cotidiano";
-                    description = "A combinação do alecrim, que traz frescor, com a suavidade das madeiras de pinho cria um ambiente leve, mas com aquele toque amadeirado que transmite acolhimento e tranquilidade.";
+                    description = "Se você quer que seu ambiente seja mais fresco, traga aquela sensação de leveza e tenha um toque amadeirado, a fragrância Alecrim e Madeiras de Pinho é perfeita para você:<br><br> 🌿 Alecrim e Madeiras de Pinho – Linha Cotidiano <br>A combinação do alecrim, que traz frescor, com a suavidade das madeiras de pinho cria um ambiente leve, mas com aquele toque amadeirado que transmite acolhimento e tranquilidade.<br><br>";
                     break;
                 case 'ca':
-                    resultText = "Magnolia e Vetiver - Linha Casa Cielito";
-                    description = "Delicada e fresca, a magnólia traz suavidade floral, enquanto o vetiver adiciona leveza e sofisticação. Uma combinação perfeita para um espaço fresco e acolhedor.";
+                    resultText = "Chá Verde – Linha Cotidiano ou Magnolia e Vetiver - Linha Casa Cielito";
+                    description = "Se você quer que seu ambiente seja mais fresco, traga aquela sensação de leveza e tenha um toque floral, essas fragrâncias são ideais para você:<br><br> 🍃 Chá Verde – Linha Cotidiano <br>Com notas frescas e florais, o Chá Verde traz uma sensação de frescor, suavidade e leveza, criando um ambiente tranquilo e acolhedor. <br><br>🌸 Magnolia e Vetiver – Linha Casa Cielito <br>Delicada e fresca, a magnólia traz suavidade floral, enquanto o vetiver adiciona leveza e sofisticação. Uma combinação perfeita para um espaço fresco e acolhedor<br><br>";
                     break;
                 case 'dd':
                     resultText = "Manga Verde e Laranja - Linha Cotidiano";
-                    description = "Com a combinação refrescante da manga verde e da laranja, essa fragrância traz uma explosão de energia e frescor, enquanto o toque adocicado adiciona uma sensação de conforto e acolhimento ao ambiente. É a escolha perfeita para criar uma atmosfera alegre e revigorante!";
+                    description = "Que escolha incrível! Se você quer que seu ambiente seja cheio de energia e vitalidade com um toque adocicado, a fragrância Manga Verde e Laranja vai deixar o espaço ainda mais vibrante e acolhedor.<br><br> 🍊 Manga Verde e Laranja – Linha Cotidiano<br> Com a combinação refrescante da manga verde e da laranja, essa fragrância traz uma explosão de energia e frescor, enquanto o toque adocicado adiciona uma sensação de conforto e acolhimento ao ambiente. É a escolha perfeita para criar uma atmosfera alegre e revigorante!<br><br";
                     break;
                 case 'dc':
                     resultText = "Chá Branco - Linha Cotidiano";
-                    description = "Essa fragrância tem o equilíbrio ideal de notas cítricas, que trazem uma sensação de frescor imediato e vitalidade para o ambiente. Com o toque suave e delicado do chá branco, ela cria uma atmosfera energizante, mas ao mesmo tempo tranquila e elegante.";
+                    description = "Que escolha maravilhosa! Se você quer que seu ambiente seja mais energético e revigorante, com aquele toque cítrico que traz frescor e leveza, a fragrância Chá Branco vai ser perfeita para transformar o espaço.<br><br> 🍃 Chá Branco – Linha Cotidiano<br> Essa fragrância tem o equilíbrio ideal de notas cítricas, que trazem uma sensação de frescor imediato e vitalidade para o ambiente. Com o toque suave e delicado do chá branco, ela cria uma atmosfera energizante, mas ao mesmo tempo tranquila e elegante<br><br>";
                     break;
                 case 'db':
                     resultText = "Alecrim e Madeiras de Pinho - Linha Cotidiano";
-                    description = "A combinação fresca e vibrante do alecrim com a suavidade das madeiras de pinho cria um ambiente cheio de vitalidade e energia, mas com aquele toque amadeirado que traz aconchego e equilíbrio.";
+                    description = "Que escolha cheia de energia! Se você quer que seu ambiente tenha energia e vitalidade com aquele toque amadeirado, a fragrância Alecrim e Madeiras de Pinho é perfeita para você: <br><br>🌿 Alecrim e Madeiras de Pinho – Linha Cotidiano<br> A combinação fresca e vibrante do alecrim com a suavidade das madeiras de pinho cria um ambiente cheio de vitalidade e energia, mas com aquele toque amadeirado que traz aconchego e equilíbrio.<br><br>";
                     break;
                 case 'da':
-                    resultText = "Olíbano e Patchouli - Linha Cotidiano";
-                    description = "Com um floral elegante e notas refrescantes, o olíbano e o patchouli criam uma fragrância envolvente e cheia de vitalidade, ideal para trazer energia e sofisticação ao ambiente.";
+                    resultText = "Magnolia e Vetiver – Linha Casa Cielito ou Olíbano e Patchouli - Linha Cotidiano";
+                    description = "Que escolha cheia de energia! Se você quer que seu ambiente tenha energia e vitalidade com um toque floral, essas fragrâncias vão ser perfeitas para trazer vida e frescor para o seu espaço:<br><br> 🌸 Magnolia e Vetiver – Linha Casa Cielito <br>Uma combinação vibrante e delicada, com a magnólia trazendo frescor floral e o vetiver dando um toque leve e sofisticado. Perfeita para energizar e refrescar o ambiente.<br><br> 🌿 Olíbano e Patchouli – Linha Cotidiano<br> Com um floral elegante e notas refrescantes, o olíbano e o patchouli criam uma fragrância envolvente e cheia de vitalidade, ideal para trazer energia e sofisticação ao ambiente.<br><br>";
                     break;
                 default:
                     resultText = "Não foi possível determinar o seu perfume ideal.";
-                    description = "";
+                    description = "Responda todas as perguntas.";
             }
 
-            resultsContainer.innerHTML = `Seu perfume ideal é: ${resultText} <br><br> Descrição: ${description}`;
-            whatsappLinkContainer.innerHTML = `<a href="http://wa.me/5573991500523">Fale conosco no WhatsApp</a>`;
+            resultsContainer.innerHTML = `Seu perfume ideal é: ${resultText} <br><br> ${description}`;
+            whatsappLinkContainer.innerHTML = `<a href="http://wa.me/5573991500523">Você vai amar esses cheirinhos! Corre aqui para garantir o seu.</a>`;
         }
 
         buildQuiz();
